@@ -21,17 +21,19 @@ interface JsonData<T, K> {
   data?: T | null;
 }
 
-export const isValidHttpCode = (code: number): boolean => {
-  return HttpCode.hasOwnProperty(code);
-};
+/**
+ * @class: generate the response message to client
+ */
 
-export const test = (code: HttpCode): any => {
-  return HttpCode[code];
-};
-
-export class message<T, K> {
+export class Message<T, K> {
   private jsonData: JsonData<T, K> = {};
 
+  /**
+   * @since 1.0.0
+   * @method: Add data into response message, error property will be null when using this function
+   * @param {Object} object The object contains data and httpcode
+   * @returns {void} put the data into resonse message
+   */
   addData = (responseMessage: IData<T>): this => {
     this.jsonData.data = responseMessage.data!;
     this.jsonData.error = {
@@ -43,6 +45,13 @@ export class message<T, K> {
     return this;
   };
 
+  /**
+   * @since 1.0.0
+   * @method: Add error into response message, data will be null when using this function
+   * @param {Object} object The object contains http code,technical error and client friendly error
+   * @returns {void} put the data into resonse message
+   */
+
   addError = (responseMessage: IError<K>): this => {
     this.jsonData.data = null;
     this.jsonData.status = HttpCode[responseMessage.httpCode];
@@ -53,6 +62,11 @@ export class message<T, K> {
     };
     return this;
   };
+
+  /**
+   * @since 1.0.0
+   * @returns {JsonData<T,K>} returns an object that contains the final message
+   */
 
   toOutput = (): JsonData<T, K> => {
     return this.jsonData;
