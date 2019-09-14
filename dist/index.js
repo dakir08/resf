@@ -14,7 +14,7 @@ var test = a
     .toOutput();
 var test2 = a
     .addError({
-    clientMessage: '1',
+    clientMessage: '2',
     httpCode: 500,
     technicalError: {
         error: 1
