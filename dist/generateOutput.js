@@ -37,4 +37,4 @@ var HttpResponse = /** @class */ (function () {
     }
     return HttpResponse;
 }());
-exports.default = HttpResponse;
+exports.HttpResponse = HttpResponse;

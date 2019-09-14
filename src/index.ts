@@ -1,2 +1,3 @@
-import HttpResponse from './generateOutput';
-import { HttpCode } from './data/httpCode';
+export { HttpCode } from './data/httpCode';
+
+export { HttpResponse } from './generateOutput';

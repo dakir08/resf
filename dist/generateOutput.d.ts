@@ -19,7 +19,7 @@ interface JsonData<T, K> {
 }
 export declare const isValidHttpCode: (code: number) => boolean;
 export declare const test: (code: HttpCode) => any;
-export default class HttpResponse<T, K> {
+export declare class HttpResponse<T, K> {
     private jsonData;
     addData: (responseMessage: IData<T>) => this;
     addError: (responseMessage: IError<K>) => this;
