@@ -1,12 +1,13 @@
 {
   "name": "resf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start:build": "tsc -w",
-    "start:run": "nodemon dist/index.js",
-    "start": "concurrently npm:start:*"
+    "dev:build": "tsc -w",
+    "dev:run": "nodemon dist/index.js",
+    "dev": "concurrently npm:dev:*",
+    "build": "tsc"
   },
   "types": "dist/index.d.ts",
   "keywords": [
@@ -14,7 +15,11 @@
     "google format",
     "util"
   ],
-  "author": "Yuuki",
+  "author": "Max Le <minhphuongsony@gmail.com>",
   "license": "ISC",
+  "homepage": "https://github.com/dakir08/resf",
+  "bugs": {
+    "url": "https://github.com/dakir08/resf/issues"
+  },
   "dependencies": {}
 }

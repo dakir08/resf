@@ -29,7 +29,7 @@ export const test = (code: HttpCode): any => {
   return HttpCode[code];
 };
 
-export class HttpResponse<T, K> {
+export class message<T, K> {
   private jsonData: JsonData<T, K> = {};
 
   addData = (responseMessage: IData<T>): this => {
