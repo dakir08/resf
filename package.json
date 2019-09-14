@@ -1,0 +1,20 @@
+{
+  "name": "resf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon dist/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "format response",
+    "google format",
+    "util"
+  ],
+  "author": "Yuuki",
+  "license": "ISC",
+  "dependencies": {}
+}
