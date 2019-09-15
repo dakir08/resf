@@ -1,4 +1,4 @@
-import { HttpResponse } from './../generateOutput';
+import HttpResponse from '../index';
 
 /**
  * Test 1:
