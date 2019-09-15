@@ -7,7 +7,8 @@
     "dev:build": "tsc -w",
     "dev:run": "nodemon dist/index.js",
     "dev": "concurrently npm:dev:*",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
   "types": "dist/index.d.ts",
   "keywords": [
@@ -21,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/dakir08/resf/issues"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "coveralls": "^3.0.6",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  }
 }
