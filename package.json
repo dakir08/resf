@@ -9,7 +9,7 @@
     "dev": "concurrently npm:dev:*",
     "build": "tsc",
     "test": "jest",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "types": "dist/index.d.ts",
   "keywords": [
