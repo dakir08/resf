@@ -1,11 +1,11 @@
-import HttpResponse from '../index';
+import { resf } from '../index';
 
 /**
  * Test 1:
  * A normal string
  */
 test('Normal data', () => {
-  const result = HttpResponse.message
+  const result = resf.message
     .addData({
       data: 'THIS IS SAMPLE TEST 1',
       httpCode: 200
@@ -29,10 +29,10 @@ test('Normal data', () => {
  * An array of data
  */
 test('Normal data', () => {
-  const result = HttpResponse.message
+  const result = resf.message
     .addData({
       data: [1, '232', 'This is a string', [1, 2, 3]],
-      httpCode: HttpResponse.code['Not Found']
+      httpCode: resf.code['Not Found']
     })
     .toOutput();
 
@@ -53,10 +53,10 @@ test('Normal data', () => {
  * An array of data
  */
 test('array data', () => {
-  const result = HttpResponse.message
+  const result = resf.message
     .addData({
       data: [1, '232', 'This is a string', [1, 2, 3]],
-      httpCode: HttpResponse.code['Not Found']
+      httpCode: resf.code['Not Found']
     })
     .toOutput();
 
@@ -77,10 +77,10 @@ test('array data', () => {
  * Add data then add error
  */
 test('Add data then fix to error', () => {
-  const result = HttpResponse.message
+  const result = resf.message
     .addData({
       data: [1, '232', 'This is a string', [1, 2, 3]],
-      httpCode: HttpResponse.code['Not Found']
+      httpCode: resf.code['Not Found']
     })
     .addError({
       clientMessage: 'Please contact to supporter',
@@ -106,7 +106,7 @@ test('Add data then fix to error', () => {
  * Add error
  */
 test('Display error', () => {
-  const result = HttpResponse.message
+  const result = resf.message
     .addError({
       clientMessage: 'Please contact to supporter',
       httpCode: 404,
@@ -131,7 +131,7 @@ test('Display error', () => {
  * Code testing
  */
 test('HTTP Code testing', () => {
-  const result = HttpResponse.code['Partial Content'];
+  const result = resf.code['Partial Content'];
 
   const actual = 206;
   expect(result).toStrictEqual(actual);
@@ -142,14 +142,14 @@ test('HTTP Code testing', () => {
  * Object data
  */
 test('Add object and use message code', () => {
-  const result = HttpResponse.message
+  const result = resf.message
     .addData({
       data: {
         id: 'n_bZUqbKM6Y',
         name: 'Dota 2 Daily WTF - Bait Master',
         duration: '00:01:42'
       },
-      httpCode: HttpResponse.code.Created
+      httpCode: resf.code.Created
     })
     .toOutput();
 
