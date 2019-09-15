@@ -5,7 +5,7 @@ import { IData, IMessage, JsonData, IError } from './interface';
  * @class: generate the response message to client
  */
 
-export default class HttpResponse<T, K> implements IMessage<T, K> {
+export class resf<T, K> implements IMessage<T, K> {
   private jsonData: JsonData<T, K> = {};
 
   /**
@@ -15,7 +15,7 @@ export default class HttpResponse<T, K> implements IMessage<T, K> {
    *
    */
   static get message() {
-    return new HttpResponse();
+    return new resf();
   }
   /**
    * @since: 1.0.3

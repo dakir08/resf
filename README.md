@@ -8,7 +8,7 @@
 ResF is designed to be the simplest way to export data to client side based on Google format.
 
 ```bash
-const resf = require('resf');
+const {resf} = require('resf');
  const message = resf.message
    .addData({
      data: "Output data",
