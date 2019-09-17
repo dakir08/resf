@@ -1,6 +1,10 @@
 {
   "name": "resf",
+<<<<<<< HEAD
   "version": "1.1.0",
+=======
+  "version": "1.0.9",
+>>>>>>> 16c88c40d3669c575ca7dff8e92b2b302981aab3
   "description": "",
   "main": "dist/index.js",
   "scripts": {
