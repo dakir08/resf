@@ -34,7 +34,7 @@ You can display error response message.
 ```bash
  const message = resf.errorResponse({
     clientMessage: 'Please contact to supporter',
-    httpCode: HttpCode.Forbidden,
+    httpCode: resf.code.Forbidden,
     technicalErrors: {
       error: 'Cannot load library',
       from: 'line 4 file test.js'
@@ -69,7 +69,7 @@ The instruction of this method will be updated soon.
 Example of data message builder
 
 ```bash
-const responseMessage = message()
+const responseMessage = resf.message()
     .addData('id', 1)
     .addData('name', 'Max')
     .addData('email', 'sample@gmail.com')
@@ -81,7 +81,7 @@ const responseMessage = message()
 Example of error message builder
 
 ```bash
-const responseMessage = message()
+const responseMessage = resf.message()
     .addError('warning', 'Cannot run test file')
     .addError('from', 'line 4, test.ts')
     .addError('cmd', 'This is a sample command')
@@ -89,7 +89,7 @@ const responseMessage = message()
     .clientMessage(
       'There are something trouble on the server, please contact to our technical support.'
     )
-    .toOutput(HttpCode['Precondition Failed']);
+    .toOutput(resf.code['Precondition Failed']);
 ```
 
 ## Installation
@@ -109,6 +109,8 @@ Please make sure to update tests as appropriate.
 ## Bug
 
 Please let me know if you have any trouble while using this package.
+
+Current issues: It's need to reinstall everytime when to use a new version of this package.
 
 ## License
 
