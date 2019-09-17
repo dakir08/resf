@@ -1,7 +1,7 @@
 {
   "name": "resf",
-  "version": "1.1.0",
-  "description": "",
+  "version": "1.1.1",
+  "description": "A simple response message to client with a nice format",
   "main": "dist/index.js",
   "scripts": {
     "dev:build": "tsc -w",
